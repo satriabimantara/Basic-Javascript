@@ -10,6 +10,31 @@
 
     <body>
         <script>
+            const sayHello = (name) => {
+                const greeting = `Hello ${name}`;
+                console.log(greeting);
+            }
+            sayHello('Satria Bimantara');
+            // Arrow function with rest parameter
+            const sayHelloRestParameter = (name, ...names) => {
+                for (const one_name of names) {
+                    document.writeln(`${one_name} <br>`);
+                }
+            }
+            sayHelloRestParameter('satria', "Budiman", "Suyanto");
+
+            // Arrow function with return value in block arrow function
+            const sum = (first, second) => {
+                return first + second;
+            }
+            // const sum = (first, second) => first + second;
+            document.writeln(sum(100, 200));
+
+            // Arrow function as parameter in another function
+            function giveMeName(callback_function, name) {
+                callback_function(name);
+            }
+            giveMeName((name) => document.writeln(name), 'Satria');
 
         </script>
     </body>

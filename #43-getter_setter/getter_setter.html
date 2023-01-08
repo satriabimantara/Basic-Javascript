@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Getter Setter</title>
+    </head>
+
+    <body>
+        <script>
+            // create getter and setter function di dalam object
+            const person = {
+                firstName: 'Satria',
+                lastName: 'Bimantara',
+                get fullName() {
+                    return `${this.firstName} ${this.lastName}`;
+                },
+                set fullName(value) {
+                    const array = value.split(' ');
+                    this.firstName = array[0];
+                    this.lastName = array[1];
+                }
+            }
+            // akses getter di object sebagai properties
+            document.writeln(person.fullName);
+
+            // ubah first name dan last name melalui setter function
+            person.fullName = 'Satria Budiman';
+            document.writeln('<br>');
+            document.writeln(person.fullName);
+
+
+
+
+        </script>
+    </body>
+
+</html>

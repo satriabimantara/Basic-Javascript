@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destructuring</title>
+    </head>
+
+    <body>
+        <script>
+            function breakline() {
+                document.writeln('<br><br>');
+            }
+            // cara manual mengakses elemen dari array
+            const numbers = [1, 2, 3, 4, 5];
+            let firstElement = numbers[0];
+            let secondElement = numbers[1];
+            let thirdElement = numbers[2];
+
+            // cara destructuring array element
+            const [elementSatu, elementDua, ...others] = numbers;
+            document.writeln(others);
+            breakline();
+
+            // destructuring object
+            const person = {
+                firstName: 'Satria',
+                lastName: 'Bimantara',
+                address: {
+                    street: 'Wall Street',
+                    city: 'Jakarta',
+                    country: 'Indonesia'
+                },
+                hobby: 'Chess',
+                age: 12,
+            }
+            // nama variabel harus sama dengan properti di object
+            // const { firstName, lastName, address, ...lainnya } = person
+            // document.writeln(address);
+            // breakline();
+            // document.writeln(lainnya.hobby);
+
+            // destructuring nested object
+            const { firstName, lastName, address: { street, city, country }, ...lainnya } = person
+            document.writeln(street);
+            breakline();
+            document.writeln(lainnya.hobby);
+            breakline();
+
+
+            // destructuring function parameter
+            function displayPersonName({ firstName, lastName }) {
+                document.writeln(`Halo user yang bernama ${firstName} ${lastName}`);
+                breakline();
+            }
+            displayPersonName(person);
+
+            // default value pada destructuring
+            /*
+            Default value pada destructuring digunakan ketika mendestruct properti atau elemen yang tidak ada
+            */
+            {
+                const { firstName, middleName = "Default Value", lastName } = person;
+                document.writeln(middleName);
+                breakline();
+            }
+
+            // Menggunakan nama variable lain
+            {
+                const {
+                    firstName: namaDepan,
+                    middleName: namaTengah = "Default Value",
+                    lastName: namaBelakang
+                } = person;
+                document.writeln(namaTengah);
+                breakline();
+            }
+
+
+        </script>
+    </body>
+
+</html>
