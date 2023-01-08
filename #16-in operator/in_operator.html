@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>In Operator in JS</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            In Operator digunakan untuk mengecek properties di suatu object ada atau tidak. Selain itu bisa mengecek index dari suatu array ada atau tidak
+            */
+            // Mengecek properties di suatu object
+            let person = {
+                'name': 'Satria',
+                age: 12
+            }
+            if ('name' in person) {
+                alert('Properties Name in Person is exist')
+            } else {
+                alert('Does not exist')
+            }
+
+            let array_names = [null, 'Satria', undefined]
+            if (0 in array_names) {
+                // yang dicek tetep hanya indexnya saja, even nilainya null atau undefined tetap di print
+                document.writeln('Index ke 0 exist')
+            }
+        </script>
+    </body>
+
+</html>

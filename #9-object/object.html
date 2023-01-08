@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Object</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Tipe Data Object
+            - Mirip seperti Array, namun index pada arraynya bisa menggunakan string
+            - Index di Tipe Data Object disebut dengan atribut atau properties
+            */
+            // define object kosong
+            let orang = {}
+            orang['name'] = "Satria Bimantara"
+            orang['age'] = 23
+            document.writeln(orang)
+            document.writeln("<br>")
+            document.writeln(orang.name)
+            document.writeln(orang.age)
+
+            // menghapus index umur
+            // delete orang['umur']
+
+            // define object langsung dengan properties dan datanya
+            let mahasiswa = {
+                name: "Budiman",
+                nim: '6035',
+                age: 23,
+                location: 'Denpasar, Bali',
+                "alamat domisili": "Jalan Pegangsaan Timur nomor 56"
+            }
+            console.table(mahasiswa)
+
+
+
+        </script>
+    </body>
+
+</html>

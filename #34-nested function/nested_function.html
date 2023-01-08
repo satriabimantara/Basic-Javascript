@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nested Function</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Nested Function
+            - Hanya bisa diakses lokal dimana function tersebut dibuat dari suatu function
+            */
+            function outer(isPrintInner) {
+                document.writeln('Outer Function')
+                document.writeln("<br>")
+                function inner() {
+                    document.writeln('Inner Function')
+                    document.writeln("<br>")
+                }
+                if (isPrintInner) {
+                    inner()
+                }
+            }
+            outer()
+            outer(true)
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array Data Type</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Array in Javascript
+            - Array in JS is dynamic, kita bisa menambahkan data ke dalam array tanpa harus mendefinisikan ukuran array, berbeda seperti definisi array di C atau Java
+            - Di dalam array tidak ada batasan tipe data apa saja ke dalam array, bahkan kita bisa memasukkan data array ke dalam array
+
+            Operasi Array di JS
+            - array.push(value)
+            - array.length
+            - array[index]
+            - array[index] = value
+            - delete array[index]
+            */
+            let mahasiswa = []
+            mahasiswa.push('Budi')
+            mahasiswa.push('Ria', 'Sinta')
+
+
+            document.writeln(`Mahasiswa Pertama = ${mahasiswa[0]}`)
+            document.writeln("<br>")
+            document.writeln(mahasiswa)
+            document.writeln("<br>")
+
+            // delete mahasiswa index ke 0 yaitu Budi
+            delete mahasiswa[0]
+            document.writeln(mahasiswa)
+            document.writeln("<br>")
+
+
+            // masukan data Budi yang baru ke index 0 semula
+            mahasiswa[0] = 'Budi Terbaru'
+            document.writeln(mahasiswa)
+            document.writeln("<br>")
+
+            // input array into array
+            let array1 = []
+            array1.push(['Satria', '602522', 23])
+            array1.push(['Sinta', '602521', 22])
+            document.writeln(array1)
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String Template</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            String Template
+            untuk menggunakan string template kita menggunakan tanda ` (backtick)
+            */
+            const name = 'Satria Bimantara'
+            const firstName = 'Satria'
+            const middleName = 'Bimantara'
+            const lastName = 'Suyanto'
+            const template = `Name : ${name}`
+            const template2 = `Name : ${firstName} ${lastName}`
+            document.writeln(template)
+            document.writeln("<br>")
+            document.writeln(template2)
+            document.writeln("<br>")
+            // Menambahkan operator di string template
+            let nilaiUjian = 89
+            const template3 = `Lulus ujian = ${nilaiUjian > 75}`
+            document.writeln(template3)
+            document.writeln("<br>")
+
+            // String Template digunakan untuk multiline string
+            const template4 = `
+            <pre>
+                Multiline String
+                Nama = ${name}
+                Lulus ujian = ${nilaiUjian > 75}
+            </pre>
+            `
+            document.writeln(template4)
+            document.writeln("<br>")
+
+
+        </script>
+    </body>
+
+</html>

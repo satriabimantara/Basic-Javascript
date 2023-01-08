@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Menjalankan kode program pada blok Function
+            */
+            function sayHelloWorld(firstName, lastName) {
+                alert(`Hello World ${firstName} ${lastName}`)
+            }
+            sayHelloWorld('Satria', 'Bimantara')
+
+            function returnSayHelloWorld(fistName, lastName) {
+                const say = fistName + lastName
+                return say
+            }
+            const greeting = returnSayHelloWorld('Satria', 'Bimantara')
+            document.writeln(greeting)
+
+            // Menghentikan eksekusi dengan Return
+            function isContain(number, listOfNumber) {
+                for (const c of listOfNumber) {
+                    if (number == c) {
+                        return 'Found'
+                    }
+                }
+                return 'Not Found'
+            }
+            document.writeln("<br>")
+            const isFound = isContain(20, [1, 20, 3, 2, 23])
+            document.writeln(isFound)
+        </script>
+    </body>
+
+</html>

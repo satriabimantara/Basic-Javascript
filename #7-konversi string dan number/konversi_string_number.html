@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String to Number Conversion</title>
+    </head>
+
+    <body>
+        <script>
+            const value1 = '1'
+            const value2 = 1
+            const sum = value1 + value2
+            document.writeln(sum)
+            document.writeln('<br>')
+
+            /*
+            Konversi String to Number
+            - parseInt
+            - parseFloat
+            - Number
+
+            Konversi Number to String
+            - toString()
+            */
+            const value3 = parseInt(value1)
+            document.writeln(value3 + value2)
+            document.writeln('<br>')
+
+            const value4 = 45
+            const total = value1 + value4.toString()
+            document.writeln(total)
+            document.writeln('<br>')
+
+            /*
+            NaN (Not a Number)
+            Jika data string yang dikonversi bukanlah data yang valid, maka hasil dari konversi tersebut adalah NaN
+            */
+            // occurs NaN
+            document.writeln(parseFloat('salah'))
+            document.writeln('<br>')
+            document.writeln(parseInt('a'))
+            document.writeln('<br>')
+            document.writeln(Number('1a'))
+            document.writeln('<br>')
+            document.writeln(Number('1.1a'))
+            document.writeln('<br>')
+
+            // Tolerate minimum NaN
+            document.writeln(parseFloat('1.1salah'))
+            document.writeln('<br>')
+            document.writeln(parseInt('1a'))
+
+            // cek isNan using isNaN() function
+            document.writeln('<br>')
+            document.writeln(isNaN(Number('Salah'))) // return true
+
+
+
+
+
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Undefined in JS</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Undefined adalah menandakan suatu variable yang belum didefinisikan datanya
+            */
+            let name;
+            if (name === undefined) {
+                alert('Undefined')
+            } else {
+                alert('Defined')
+            }
+
+            // mengecek undefined value in array JS
+            let names = ['Budi', 'Eko']
+            if (names[2] === undefined) {
+                document.writeln('Array Undefined')
+            } else {
+                document.writeln('Array defined')
+            }
+            delete names[0];
+            document.writeln("<br>")
+            if (names[0] === undefined) {
+                document.writeln('Array Undefined')
+            } else {
+                document.writeln('Array defined')
+            }
+
+            // Mengecek undefined value in object JS
+            let person = {}
+            document.writeln("<br>")
+            if (person['name'] === undefined) {
+                document.writeln('Object Undefined')
+            } else {
+                document.writeln('Object defined')
+            }
+        </script>
+    </body>
+
+</html>

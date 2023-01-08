@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rest Parameter Function in JS</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Rest Parameter
+            - Fitur dimana kita bisa mengirim data sebanyak-banyaknya pada satu parameter dan secara otomatis akan dikonversi menjadi Array
+            Ketentuan Rest Parameter:
+            - Hanya boleh ada satu di function, tidak boleh lebih dari satu
+            - Hanya boleh berada di posisi paling akhir, tidak boleh di depan atau di tengah, kecuali memang cuma ada 1 parameter
+            - Pada bahasa pemrograman lain, ada juga yang menyebut ini sebagai variable argument
+            */
+            function sum(name, ...data) {
+                let total_data = 0
+                for (const datum of data) {
+                    total_data += datum
+                }
+                document.writeln(`<p>${name} = ${total_data}</p>`)
+            }
+            sum('Banana', 1, 2, 3, 4, 5)
+            sum('Jack Fruit', 340, 3)
+        </script>
+    </body>
+
+</html>

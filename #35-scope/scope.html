@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scope in JS</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Scope
+            - Global scope and Local Scope
+            - Merupakan area akses sebuah data
+            - Data global bisa diakses di lokal scope, namun tidak sebaliknya
+            */
+            let counter = 0
+            function hitMe() {
+                counter += 1
+            }
+            document.writeln(`<p>${counter}</p>`)
+            hitMe()
+            document.writeln(`<p>${counter}</p>`)
+
+
+            function first() {
+                let firstVariable = 'FirstVariable'
+                return firstVariable
+            }
+            document.writeln(first())
+        </script>
+    </body>
+
+</html>

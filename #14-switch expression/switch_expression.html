@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Switch Statement in JS</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Switch statement
+            - Digunakan untuk perbandingan sederhana ketimbang menggunakan IF statement
+            - Hanya perbandingan sama dengan
+            */
+            let nilai = 'A';
+            switch (nilai) {
+                case 'A':
+                    document.writeln('Anda luar biasa')
+                    break
+                case 'B':
+                    document.writeln('Anda Baik')
+                    break
+                case 'C':
+                case 'D':
+                    document.writeln('Cukup')
+                    break
+                default:
+                    document.writeln('Default value switch')
+                    break
+            }
+        </script>
+    </body>
+
+</html>

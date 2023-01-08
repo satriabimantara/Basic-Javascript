@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Break and Continue</title>
+    </head>
+
+    <body>
+        <script>
+            // cari bilangan 10 dari perulangan, kalau ketemu break
+            let counter = 1
+            while (true) {
+                if (counter == 10) {
+                    document.writeln('Found 10 in looping')
+                    break
+                }
+                counter += 1
+            }
+
+            // Menampilkan perulangan ganjil
+            document.writeln("Perulangan Ganjil")
+            document.writeln("<br>")
+            counter = 0
+            while (counter <= 20) {
+                document.writeln(counter)
+                counter += 1
+            }
+        </script>
+    </body>
+
+</html>
